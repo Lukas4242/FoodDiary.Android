@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparentBlack">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="@string/name"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/calories"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/protein"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/fat"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/carbs"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/mass"
+                android:textSize="@dimen/text_large" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/margin_small"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/kcal"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/g"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/g"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/g"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/g"
+                android:textSize="@dimen/text_large" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_toStartOf="@id/units"
+            android:layout_toEndOf="@id/names"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:gravity="end|center_vertical"
+                android:inputType="text"
+                android:textSize="@dimen/text_large"
+                tools:text="123" />
+
+            <EditText
+                android:id="@+id/etCalories"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@null"
+                android:gravity="end|center_vertical"
+                android:inputType="number"
+                android:textSize="@dimen/text_large"
+                android:text="@string/_0" />
+
+            <EditText
+                android:id="@+id/etProtein"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@null"
+                android:gravity="end|center_vertical"
+                android:inputType="number"
+                android:textSize="@dimen/text_large"
+                android:text="@string/_0" />
+
+            <EditText
+                android:id="@+id/etFat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@null"
+                android:gravity="end|center_vertical"
+                android:inputType="number"
+                android:textSize="@dimen/text_large"
+                android:text="@string/_0" />
+
+            <EditText
+                android:id="@+id/etCarbs"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@null"
+                android:gravity="end|center_vertical"
+                android:inputType="number"
+                android:textSize="@dimen/text_large"
+                android:text="@string/_0" />
+
+            <EditText
+                android:id="@+id/etMass"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@null"
+                android:gravity="end|center_vertical"
+                android:inputType="number"
+                android:textSize="@dimen/text_large"
+                android:text="@string/_0" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnDismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/units"
+            android:layout_alignBottom="@id/btnConfirm"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toStartOf="@id/btnDelete"
+            android:gravity="center"
+            android:text="@string/dismiss"
+            android:textSize="@dimen/text_large" />
+
+        <TextView
+            android:id="@+id/btnDelete"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/units"
+            android:layout_alignBottom="@id/btnConfirm"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toStartOf="@id/btnConfirm"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_large" />
+
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/units"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/margin_small"
+            android:text="@string/confirm" />
+    </RelativeLayout>
+</RelativeLayout>

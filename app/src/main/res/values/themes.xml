@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FoodDiary" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/crocodile1</item>
+        <item name="colorPrimaryVariant">@color/crocodile3</item>
+        <item name="colorOnPrimary">@color/crocodile4</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/crocodile2</item>
+        <item name="colorSecondaryVariant">@color/crocodile3</item>
+        <item name="colorOnSecondary">@color/crocodile4</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.FoodDiary.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FoodDiary.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FoodDiary.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Button">
+        <item name="android:background">@drawable/rounded_corners_background</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+</resources>

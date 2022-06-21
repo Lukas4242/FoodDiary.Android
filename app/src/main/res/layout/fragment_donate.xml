@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.donate.DonateFragment">
+
+        <ImageView
+            android:id="@+id/imgCash"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_money"
+            app:tint="@color/green" />
+
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgCash"
+            android:layout_margin="@dimen/margin_large"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/etAmount"
+            android:layout_alignBottom="@id/etAmount"
+            android:layout_toEndOf="@id/etAmount"
+            android:gravity="center"
+            android:text="@string/pln" />
+
+        <LinearLayout
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:id="@+id/cardInputWidget"
+            android:layout_below="@id/etAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/etCard"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/card"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etCVC"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/CVC"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etMM"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/MM"
+                android:inputType="number" />
+            <EditText
+                android:id="@+id/etYYYY"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/YYYY"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_below="@id/cardInputWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_large"
+            android:text="@string/pay" />
+
+    </RelativeLayout>
+</ScrollView>

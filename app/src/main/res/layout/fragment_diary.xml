@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".ui.diary.DiaryFragment">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:padding="@dimen/margin_small"
+        android:textSize="@dimen/text_normal"
+        android:textStyle="bold"
+        tools:text="17/12/2022" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvSummary"
+        android:layout_below="@id/tvDate">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/tvBreakfast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="?colorPrimary">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/breakfast"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tvBreakfastCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal"
+                    tools:text="360 kcal" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBreakfast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBreakfast"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/btnAddBreakfast"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/rvBreakfast"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_add"
+                app:tint="?colorPrimary" />
+
+            <RelativeLayout
+                android:id="@+id/tvDinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnAddBreakfast"
+                android:layout_marginBottom="2dp"
+                android:background="?colorPrimary">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/dinner"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tvDinnerCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal"
+                    tools:text="360 kcal" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDinner"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/btnAddDinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/rvDinner"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_add"
+                app:tint="?colorPrimary" />
+
+            <RelativeLayout
+                android:id="@+id/tvSupper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnAddDinner"
+                android:layout_marginBottom="2dp"
+                android:background="?colorPrimary">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/supper"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tvSupperCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal"
+                    tools:text="360 kcal" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSupper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSupper"
+                android:layout_marginTop="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/btnAddSupper"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/rvSupper"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_add"
+                app:tint="?colorPrimary" />
+
+            <RelativeLayout
+                android:id="@+id/tvSnacks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnAddSupper"
+                android:layout_marginBottom="2dp"
+                android:background="?colorPrimary">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/snacks"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/tvSnackCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal"
+                    tools:text="360 kcal" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSnacks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSnacks"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/btnAddSnack"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/rvSnacks"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_add"
+                app:tint="?colorPrimary" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?colorPrimary"
+        android:gravity=""
+        android:padding="@dimen/margin_small"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_normal"
+        android:textStyle="bold"
+        tools:text="SUMA: 1080 kcal b: 120 t: 30 w: 100" />
+
+</RelativeLayout>

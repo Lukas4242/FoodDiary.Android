@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FoodDiary" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/crocodile1</item>
+        <item name="colorPrimaryVariant">@color/crocodile3</item>
+        <item name="colorOnPrimary">@color/crocodile4</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/crocodile2</item>
+        <item name="colorSecondaryVariant">@color/crocodile3</item>
+        <item name="colorOnSecondary">@color/crocodile4</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
